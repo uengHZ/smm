@@ -14,7 +14,7 @@ class CreateKaryawanTable extends Migration
     public function up()
     {
         Schema::create('karyawan', function (Blueprint $table) {
-            $table->char('nik',13)->index();
+            $table->char('nik',13)->unique();
             $table->string('nama');
             $table->string('departemen');
             $table->timestamps();

@@ -16,7 +16,7 @@ class CreateWhinventoryTable extends Migration
         Schema::create('whinventory', function (Blueprint $table) {
             $table->char('item_no',10)->index();
             $table->foreign('item_no')->references('item_no')->on('item');
-            $table->char('period',6);
+            $table->char('period',6)->index();
             $table->double('saldo_awal',14,2);
             $table->double('in',14,2);
             $table->double('out',14,2);

@@ -14,7 +14,7 @@ class CreateItemTable extends Migration
     public function up()
     {
         Schema::create('item', function (Blueprint $table) {
-            $table->char('item_no',10)->index();
+            $table->char('item_no',10)->unique();
             $table->string('item')->nullable();
             $table->string('lokasi');
             $table->string('satuan');
